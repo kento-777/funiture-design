@@ -140,13 +140,13 @@ main {
 
 main .wrapper {
   margin: 0 auto;
-  padding-bottom: 200px;
+  padding-bottom: 160px;
   max-width: 1280px;
 }
 
 main .wrapper .main-logo {
   max-width: 1280px;
-  margin: 40px auto 30px auto;
+  margin: 40px auto 16px auto;
   font-size: 14px;
   font-weight: 525;
 }
@@ -165,7 +165,7 @@ main .wrapper ul li {
 
 main .wrapper ul li p {
   font-size: 14px;
-  line-height: 1.8rem;
+  line-height: 1.6rem;
 }
 
 #wrapper {
@@ -222,8 +222,12 @@ footer .wrapper .copy-right p {
   main .wrapper .production {
     width: 47%;
   }
+  footer {
+    position: static;
+  }
   footer .wrapper {
     display: block;
+    padding-bottom: 10px;
   }
   footer .wrapper ul {
     display: -webkit-box;

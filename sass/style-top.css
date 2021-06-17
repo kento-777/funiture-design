@@ -198,6 +198,7 @@ footer .wrapper ul {
 
 footer .wrapper ul li {
   padding-right: 30px;
+  padding-bottom: 5px;
 }
 
 footer .wrapper ul li a {
@@ -233,4 +234,4 @@ footer .wrapper .copy-right p {
     margin: 0 0 10px 0;
   }
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style-top.css.map */
