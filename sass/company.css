@@ -1,5 +1,9 @@
 @charset "UTF-8";
 /*全体の設定*/
+html {
+  height: 100%;
+}
+
 ul {
   padding: 0;
   list-style: none;
@@ -11,6 +15,7 @@ a {
 
 body {
   margin: 0;
+  height: 100%;
 }
 
 /*mixinのコーナー*/
@@ -134,47 +139,62 @@ main {
 }
 
 main .wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   margin: 0 auto;
+  padding: 0 20px 200px 20px;
   max-width: 1280px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 
-main .wrapper .production {
-  width: 23%;
-  padding-bottom: 30px;
+main .wrapper .main-logo {
+  max-width: 1280px;
+  margin: 40px auto 30px auto;
+  font-size: 14px;
+  font-weight: 525;
 }
 
-main .wrapper .production :hover {
-  position: relative;
-  z-index: 1;
-  opacity: 0.8;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+main .wrapper dl {
+  text-align: left;
+  max-width: 600px;
 }
 
-main .wrapper .production-img img {
+main .wrapper dl dt {
+  border-bottom: 1px solid rgba(114, 114, 114, 0.3);
+  font-size: 14px;
+  width: 30%;
+  float: left;
+  padding: 20px 0 20px 10px;
+}
+
+main .wrapper dl dd {
+  border-bottom: 1px solid rgba(114, 114, 114, 0.3);
+  font-size: 14px;
+  width: 65%;
+  margin: 0;
+  float: left;
+  padding: 20px 0;
+}
+
+main .wrapper dl .last-item {
+  border-bottom: none;
+}
+
+main .wrapper .map {
+  max-width: 610px;
+}
+
+main .wrapper .map iframe {
   width: 100%;
+  border: none;
 }
 
-main .wrapper .production-description {
-  font-size: 12px;
-  margin: 5px 0;
+#wrapper {
+  width: 100%;
+  position: relative;
 }
 
-main .more-btn {
-  margin: 0 auto 100px auto;
-  text-align: center;
-}
-
-main .more-btn a {
-  color: #000;
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 footer .wrapper {
@@ -216,8 +236,19 @@ footer .wrapper .copy-right p {
   main {
     padding-top: 90px;
   }
-  main .wrapper .production {
-    width: 47%;
+  main .wrapper {
+    padding: 0 0 200px 0;
+  }
+  main .wrapper dl dt {
+    clear: both;
+    border: none;
+    padding: 20px 0 5px 10px;
+    width: 100%;
+  }
+  main .wrapper dl dd {
+    clear: both;
+    padding: 5px 0 20px 10px;
+    width: 100%;
   }
   footer .wrapper {
     display: block;
@@ -232,4 +263,4 @@ footer .wrapper .copy-right p {
     margin: 0 0 10px 0;
   }
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=company.css.map */

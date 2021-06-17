@@ -1,0 +1,286 @@
+@charset "UTF-8";
+/*全体の設定*/
+html {
+  height: 100%;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+}
+
+/*mixinのコーナー*/
+/*headerメニュー*/
+header {
+  width: 100%;
+  background-color: #fff;
+  position: fixed;
+  z-index: 99;
+  /*ハンバーガーボタン*/
+}
+
+header .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  max-width: 1280px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 25px 40px 20px 40px;
+}
+
+header .wrapper .logo {
+  width: 180px;
+  height: 25px;
+}
+
+header .wrapper .logo img {
+  width: 100%;
+  height: 100%;
+}
+
+header .humberger {
+  display: block;
+  position: fixed;
+  z-index: 99;
+  right: 0;
+  top: 0;
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+}
+
+header .humberger .bar {
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  right: 6px;
+  background: #555;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+header .humberger .bar-top {
+  top: 10px;
+}
+
+header .humberger .bar-bottom {
+  top: 20px;
+}
+
+header .mask nav ul {
+  display: block;
+  position: fixed;
+  top: 40px;
+  left: -500px;
+  margin: 0;
+}
+
+header .mask nav ul li {
+  margin-bottom: 10px;
+}
+
+header .mask nav ul li a {
+  font-size: 14px;
+  color: #fff;
+}
+
+/*ハンバーガーを開いたとき*/
+.active-top {
+  -webkit-transform: translate(-50%, 15px) rotate(45deg);
+          transform: translate(-50%, 15px) rotate(45deg);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.active-bottom {
+  -webkit-transform: translate(-50%, 5px) rotate(-45deg);
+          transform: translate(-50%, 5px) rotate(-45deg);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.open {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: .8;
+  z-index: 100;
+  cursor: pointer;
+}
+
+/*mainめにゅーだよ*/
+main {
+  padding: 70px 40px 0 40px;
+  position: relative;
+  z-index: 1;
+}
+
+main .wrapper {
+  margin: 0 auto;
+  padding-bottom: 150px;
+  max-width: 1280px;
+}
+
+main .wrapper .main-logo {
+  max-width: 1280px;
+  margin: 40px auto 30px auto;
+  font-size: 14px;
+  font-weight: 525;
+}
+
+main .wrapper .product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .wrapper .product .product-img {
+  width: 400px;
+  height: 400px;
+  padding-right: 60px;
+}
+
+main .wrapper .product .product-img img {
+  max-width: 100%;
+  height: 100%;
+}
+
+main .wrapper .product ul {
+  margin: 0;
+  max-width: 350px;
+}
+
+main .wrapper .product ul li p {
+  padding: 10px 0;
+  margin-top: 0;
+  font-size: 14px;
+}
+
+main .wrapper .product ul li dl {
+  text-align: left;
+}
+
+main .wrapper .product ul li dl dt {
+  float: left;
+  margin: 0;
+  width: 30%;
+  font-size: 14px;
+}
+
+main .wrapper .product ul li dl dd {
+  float: left;
+  margin: 0;
+  width: 65%;
+  font-size: 14px;
+}
+
+main .wrapper .back-btn {
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 70px;
+}
+
+main .wrapper .back-btn a {
+  text-decoration: none;
+  color: black;
+  width: 100%;
+  font-size: 14px;
+}
+
+#wrapper {
+  width: 100%;
+  position: relative;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+footer .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  max-width: 1280px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 40px;
+}
+
+footer .wrapper ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .wrapper ul li {
+  padding-right: 30px;
+}
+
+footer .wrapper ul li a {
+  color: #000;
+  font-size: 12px;
+}
+
+footer .wrapper .copy-right p {
+  font-size: 10px;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 900px) {
+  header .wrapper {
+    padding: 30px 40px 0 40px;
+  }
+  main {
+    padding-top: 90px;
+  }
+  main .wrapper .product {
+    display: block;
+  }
+  main .wrapper .product .product-img {
+    width: 100%;
+    margin: 0 auto;
+  }
+  main .wrapper .product ul {
+    margin: 0 auto;
+  }
+  footer .wrapper {
+    display: block;
+  }
+  footer .wrapper ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+  }
+  footer .wrapper .copy-right p {
+    margin: 0 0 10px 0;
+  }
+}
+/*# sourceMappingURL=product-detail.css.map */
