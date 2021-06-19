@@ -1,0 +1,50 @@
+main {
+  padding: 70px 40px 0 40px;
+  position: relative;
+  z-index: 1;
+  .wrapper {
+    margin:0 auto;
+    padding: 0 0 200px 0; 
+    max-width: 1280px;
+    .main-logo {
+      max-width: 1280px;
+      margin: 40px auto 30px auto;
+      font-size: 14px;
+      font-weight: 525;
+    }
+
+    dl {
+      text-align: left;
+      max-width: 600px;
+      
+      dt {
+        border-bottom: 1px solid rgba(114, 114, 114, 0.3);
+        font-size: 14px;
+        width: 30%;
+        float: left;
+        padding: 20px 0 20px 10px;
+      }
+      
+      dd {
+        border-bottom: 1px solid rgba(114, 114, 114, 0.3);
+        font-size: 14px;
+        width: 65%;
+        margin: 0;
+        float: left;
+        padding: 20px 0;
+      }
+
+      .last-item {
+        border-bottom: none;
+      }
+    }
+
+    .map {
+      max-width: 610px;
+      iframe {
+        width: 100%;
+        border: none;
+      }
+    }
+  }
+}

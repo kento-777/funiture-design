@@ -1,0 +1,33 @@
+@media screen and (max-width: 900px) {
+  header {
+    .wrapper {
+      padding:30px 40px 0 40px;
+    }
+  }
+  main {
+    padding-top: 90px;
+    .wrapper {
+      ul {
+        .production {
+          width: 47%;
+        }
+      }
+    }
+  }
+
+  footer {
+    .wrapper {
+      display: block;
+      ul {
+       display: flex;
+       margin: 0; 
+      }
+      .copy-right {
+        padding-bottom: 10px;
+        p {
+          margin: 0 0 10px 0;
+        }
+      }
+    }
+  }
+}

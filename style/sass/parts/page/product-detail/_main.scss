@@ -1,0 +1,66 @@
+main {
+  padding: 70px 40px 0 40px;
+  position: relative;
+  z-index: 1;
+  .wrapper {
+    margin:0 auto;
+    padding-bottom: 150px; 
+    max-width: 1280px;
+    .main-logo {
+      max-width: 1280px;
+      margin: 40px auto 30px auto;
+      font-size: 14px;
+      font-weight: 525;
+    }
+    .product {
+      display: flex;
+      .product-img {
+        width: 400px;
+        padding-right: 60px;
+        img {
+          max-width: 100%;
+          
+        }
+      }
+      ul {
+        margin: 0;
+        max-width: 350px;
+        li {
+          p {
+            padding: 0;
+            margin-top: 0;
+            font-size: 14px;
+          }
+
+          dl {
+            text-align: left;
+            dt {
+              float: left;
+              margin: 0;
+              width: 30%;
+              font-size: 14px;
+            }
+            dd {
+              float: left;
+              margin: 0;
+              width: 65%;
+              font-size: 14px;
+            }
+          }
+        }
+      }         
+    }
+    .back-btn {
+      text-align: center;
+      margin: 0 auto;
+      padding-top: 70px;
+      a {
+        text-decoration: none;
+        color: black;
+        width: 100%;
+        font-size: 14px;
+        
+      }
+    }
+  }
+}

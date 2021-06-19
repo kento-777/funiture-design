@@ -1,0 +1,31 @@
+body {
+  position: relative;
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  .wrapper {
+    @include wrapper();
+    justify-content: space-between;
+    padding:0 40px;
+    ul {
+      display: flex;
+      li {
+        padding-right: 30px;
+        padding-bottom: 5px;
+        a {
+          color: #000;
+          font-size: 12px;
+        }
+      }
+    }
+
+    .copy-right {
+      p {
+        font-size: 10px;
+        margin-top: 20px;
+      }
+    }
+  }
+}

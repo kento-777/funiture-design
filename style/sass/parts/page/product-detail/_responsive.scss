@@ -1,0 +1,43 @@
+@media screen and (max-width: 900px) {
+  header {
+    .wrapper {
+      padding:30px 40px 0 40px;
+    }
+  }
+  main {
+    padding-top: 90px;
+    .wrapper {
+      .product {
+        flex-direction: column;
+        width: 100%;
+        .product-img {
+          text-align: center;
+          margin: 0 auto;
+          padding: 0;
+          width: 100%;
+        }
+        ul {
+          max-width: 100%;
+          li {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    .wrapper {
+      display: block;
+      ul {
+       display: flex;
+       margin: 0; 
+      }
+      .copy-right {
+        p {
+          margin: 0 0 10px 0;
+        }
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/*全体の設定*/
+/*====全体の設定====*/
 ul {
   padding: 0;
   list-style: none;
@@ -11,10 +11,11 @@ a {
 
 body {
   margin: 0;
+  min-height: 100vh;
 }
 
-/*mixinのコーナー*/
-/*headerメニュー*/
+/*====mixin====*/
+/*====headerメニュー====*/
 header {
   width: 100%;
   background-color: #fff;
@@ -151,13 +152,25 @@ main .wrapper .production-description {
 }
 
 main .more-btn {
-  margin: 0 auto 100px auto;
+  margin: 0 auto;
+  padding-bottom: 160px;
   text-align: center;
 }
 
 main .more-btn a {
   width: 100%;
   color: #000;
+}
+
+/*====フッター====*/
+body {
+  position: relative;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 footer .wrapper {
@@ -187,6 +200,7 @@ footer .wrapper .copy-right p {
   margin-top: 20px;
 }
 
+/*レスポンシブ設定*/
 @media screen and (max-width: 900px) {
   header .wrapper {
     padding: 30px 40px 0 40px;

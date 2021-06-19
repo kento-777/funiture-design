@@ -1,9 +1,5 @@
 @charset "UTF-8";
-/*全体の設定*/
-html {
-  height: 100%;
-}
-
+/*====全体の設定====*/
 ul {
   padding: 0;
   list-style: none;
@@ -15,11 +11,11 @@ a {
 
 body {
   margin: 0;
-  height: 100%;
+  min-height: 100vh;
 }
 
-/*mixinのコーナー*/
-/*headerメニュー*/
+/*====mixin====*/
+/*====headerメニュー====*/
 header {
   width: 100%;
   background-color: #fff;
@@ -119,7 +115,7 @@ header .mask nav ul li a {
   cursor: pointer;
 }
 
-/*mainめにゅーだよ*/
+/*====mainめにゅーだよ====*/
 main {
   padding: 70px 40px 0 40px;
   position: relative;
@@ -174,8 +170,8 @@ main .wrapper .map iframe {
   border: none;
 }
 
-#wrapper {
-  width: 100%;
+/*====フッター====*/
+body {
   position: relative;
 }
 
@@ -199,6 +195,7 @@ footer .wrapper ul {
 
 footer .wrapper ul li {
   padding-right: 30px;
+  padding-bottom: 5px;
 }
 
 footer .wrapper ul li a {

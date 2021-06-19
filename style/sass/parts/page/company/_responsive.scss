@@ -1,0 +1,41 @@
+@media screen and (max-width: 900px) {
+  header {
+    .wrapper {
+      padding:30px 40px 0 40px;
+    }
+  }
+  main {
+    padding-top: 90px;
+    .wrapper {
+      padding: 0 0 200px 0;
+      dl {
+        dt {
+          clear: both;
+          border: none;
+          padding:20px 0 5px 10px;
+          width: 100%;
+        }
+        dd {
+          clear: both;
+          padding: 5px 0 20px 10px;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  footer {
+    .wrapper {
+      display: block;
+      ul {
+       display: flex;
+       margin: 0; 
+      }
+      .copy-right {
+        p {
+          margin: 0 0 10px 0;
+        }
+      }
+    }
+  }
+}
