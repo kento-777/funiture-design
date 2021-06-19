@@ -1,8 +1,8 @@
 /*全体の設定*/
-html {
-  height: 100%;
-}
-ul {
+html, body {
+    height: 100%;
+  }
+  ul {
     padding: 0;
     list-style: none;
   }
@@ -13,7 +13,6 @@ ul {
   
   body {
     margin: 0;
-    height: 100%;
   }
   
   
@@ -44,22 +43,23 @@ ul {
         img {
           width: 100%;
           height: 100%;
-  
+          cursor: pointer;
         }
       }
     }
     /*ハンバーガーボタン*/
     .humberger {
-       display: block;
-       position: fixed;
-       z-index: 99;
-       right: 0;
-       top: 0;
-       width: 42px;
-       height: 42px;
-       cursor: pointer;
-       text-align: center;
-       position: relative;
+      display: block;
+      position: fixed;
+      z-index: 99;
+      right: 0;
+      top: 0;
+      width: 42px;
+      height: 42px;
+      cursor: pointer;
+      text-align: center;
+      position: relative;
+      
       
        .bar {
         display: block;
@@ -101,11 +101,11 @@ ul {
   
   /*ハンバーガーを開いたとき*/
   .active-top {
-    transform: translate(-50%, 15px) rotate(45deg);
+    transform: translate(0, 5px) rotate(45deg);
     transition: transform 0.3s;
   }
   .active-bottom {
-    transform: translate(-50%, 5px) rotate(-45deg);
+    transform: translate(0, -5px) rotate(-45deg);
     transition: transform 0.3s;
   }
   
@@ -128,72 +128,73 @@ ul {
     position: relative;
     z-index: 1;
     .wrapper {
-      margin:0 auto;
-      padding: 0 0 200px 0; 
       max-width: 1280px;
+      margin: 0 auto;
+  
       .main-logo {
         max-width: 1280px;
         margin: 40px auto 30px auto;
         font-size: 14px;
         font-weight: 525;
       }
-      dl {
-        text-align: left;
-        max-width: 600px;
+  
+      ul {
+        @include wrapper();
+        justify-content: space-between;
+        flex-wrap: wrap;
         
-        dt {
-          border-bottom: 1px solid rgba(114, 114, 114, 0.3);
-          font-size: 14px;
-          width: 30%;
-          float: left;
-          padding: 20px 0 20px 10px;
+  
+        .production {
+          width: 23%;
+          padding-bottom: 30px;
+  
+          :hover {
+            position: relative;
+            z-index: 1;
+            opacity: 0.8;
+            transition: all 0.5s;
+          }
           
-        }
-        dd {
-          border-bottom: 1px solid rgba(114, 114, 114, 0.3);
-          font-size: 14px;
-          width: 65%;
-          margin: 0;
-          float: left;
-          padding: 20px 0;
-         
-        }
-        .last-item {
-          border-bottom: none;
+          &-img {
+            img {
+              width: 100%;
+            }
+          }
+  
+          &-description {
+            font-size: 12px;
+            margin: 5px 0;
+          }
         }
       }
-
-      .map {
-        max-width: 610px;
-        iframe {
-          width: 100%;
-          border: none;
-        }
+    }
+    .more-btn {
+      margin: 0 auto 100px auto;
+      text-align: center;
+      .btn-1 {
+        width: 100%;
+        color: #000;
+        padding-right: 15px;
       }
-      
+      .btn-2 {
+        width: 100%;
+        color: #000;
+        padding-left: 15px;
+      }
     }
   }
   
-    
-  
-
-  #wrapper {
-    width: 100%;
-    position: relative;
-  }
-  
   footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
     .wrapper {
       @include wrapper();
       justify-content: space-between;
       padding:0 40px;
+      min-height: 100%;
       ul {
         display: flex;
         li {
           padding-right: 30px;
+          padding-bottom: 5px;
           a {
             color: #000;
             font-size: 12px;
@@ -220,18 +221,9 @@ ul {
     main {
       padding-top: 90px;
       .wrapper {
-        padding: 0 0 200px 0;
-        dl {
-          dt {
-            clear: both;
-            border: none;
-            padding:20px 0 5px 10px;
-            width: 100%;
-          }
-          dd {
-            clear: both;
-            padding: 5px 0 20px 10px;
-            width: 100%;
+        ul {
+          .production {
+            width: 47%;
           }
         }
       }
@@ -245,6 +237,7 @@ ul {
          margin: 0; 
         }
         .copy-right {
+          padding-bottom: 10px;
           p {
             margin: 0 0 10px 0;
           }

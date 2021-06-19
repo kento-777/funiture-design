@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*全体の設定*/
-html, body {
+html {
   height: 100%;
 }
 
@@ -15,6 +15,7 @@ a {
 
 body {
   margin: 0;
+  height: 100%;
 }
 
 /*mixinのコーナー*/
@@ -28,14 +29,10 @@ header {
 }
 
 header .wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
   max-width: 1280px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   padding: 25px 40px 20px 40px;
 }
 
@@ -47,6 +44,7 @@ header .wrapper .logo {
 header .wrapper .logo img {
   width: 100%;
   height: 100%;
+  cursor: pointer;
 }
 
 header .humberger {
@@ -69,7 +67,6 @@ header .humberger .bar {
   height: 2px;
   right: 6px;
   background: #555;
-  -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
 }
 
@@ -100,21 +97,13 @@ header .mask nav ul li a {
 
 /*ハンバーガーを開いたとき*/
 .active-top {
-  -webkit-transform: translate(-50%, 15px) rotate(45deg);
-          transform: translate(-50%, 15px) rotate(45deg);
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
+  transform: translate(0, 5px) rotate(45deg);
   transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 .active-bottom {
-  -webkit-transform: translate(-50%, 5px) rotate(-45deg);
-          transform: translate(-50%, 5px) rotate(-45deg);
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
+  transform: translate(0, -5px) rotate(-45deg);
   transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 .open {
@@ -138,6 +127,8 @@ main {
 }
 
 main .wrapper {
+  margin: 0 auto;
+  padding: 0 0 200px 0;
   max-width: 1280px;
 }
 
@@ -148,61 +139,43 @@ main .wrapper .main-logo {
   font-weight: 525;
 }
 
-main .wrapper ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0 auto;
-  max-width: 1280px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+main .wrapper dl {
+  text-align: left;
+  max-width: 600px;
 }
 
-main .wrapper ul .production {
-  width: 23%;
-  padding-bottom: 30px;
+main .wrapper dl dt {
+  border-bottom: 1px solid rgba(114, 114, 114, 0.3);
+  font-size: 14px;
+  width: 30%;
+  float: left;
+  padding: 20px 0 20px 10px;
 }
 
-main .wrapper ul .production :hover {
-  position: relative;
-  z-index: 1;
-  opacity: 0.8;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+main .wrapper dl dd {
+  border-bottom: 1px solid rgba(114, 114, 114, 0.3);
+  font-size: 14px;
+  width: 65%;
+  margin: 0;
+  float: left;
+  padding: 20px 0;
 }
 
-main .wrapper ul .production-img img {
+main .wrapper dl .last-item {
+  border-bottom: none;
+}
+
+main .wrapper .map {
+  max-width: 610px;
+}
+
+main .wrapper .map iframe {
   width: 100%;
-}
-
-main .wrapper ul .production-description {
-  font-size: 12px;
-  margin: 5px 0;
-}
-
-main .more-btn {
-  margin: 0 auto 100px auto;
-  text-align: center;
-}
-
-main .more-btn .btn-1 {
-  width: 100%;
-  color: #000;
-  padding-right: 15px;
-}
-
-main .more-btn .btn-2 {
-  width: 100%;
-  color: #000;
-  padding-left: 15px;
+  border: none;
 }
 
 #wrapper {
   width: 100%;
-  height: 100%;
   position: relative;
 }
 
@@ -213,21 +186,14 @@ footer {
 }
 
 footer .wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
   max-width: 1280px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   padding: 0 40px;
-  min-height: 100%;
 }
 
 footer .wrapper ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -252,15 +218,24 @@ footer .wrapper .copy-right p {
   main {
     padding-top: 90px;
   }
-  main .wrapper ul .production {
-    width: 47%;
+  main .wrapper {
+    padding: 0 0 200px 0;
+  }
+  main .wrapper dl dt {
+    clear: both;
+    border: none;
+    padding: 20px 0 5px 10px;
+    width: 100%;
+  }
+  main .wrapper dl dd {
+    clear: both;
+    padding: 5px 0 20px 10px;
+    width: 100%;
   }
   footer .wrapper {
     display: block;
   }
   footer .wrapper ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     margin: 0;
   }
@@ -268,4 +243,4 @@ footer .wrapper .copy-right p {
     margin: 0 0 10px 0;
   }
 }
-/*# sourceMappingURL=view-more-style.css.map */
+/*# sourceMappingURL=company.css.map */

@@ -28,14 +28,10 @@ header {
 }
 
 header .wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
   max-width: 1280px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   padding: 25px 40px 20px 40px;
 }
 
@@ -47,6 +43,7 @@ header .wrapper .logo {
 header .wrapper .logo img {
   width: 100%;
   height: 100%;
+  cursor: pointer;
 }
 
 header .humberger {
@@ -69,7 +66,6 @@ header .humberger .bar {
   height: 2px;
   right: 6px;
   background: #555;
-  -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
 }
 
@@ -100,21 +96,13 @@ header .mask nav ul li a {
 
 /*ハンバーガーを開いたとき*/
 .active-top {
-  -webkit-transform: translate(-50%, 15px) rotate(45deg);
-          transform: translate(-50%, 15px) rotate(45deg);
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
+  transform: translate(0, 5px) rotate(45deg);
   transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 .active-bottom {
-  -webkit-transform: translate(-50%, 5px) rotate(-45deg);
-          transform: translate(-50%, 5px) rotate(-45deg);
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
+  transform: translate(0, -5px) rotate(-45deg);
   transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 .open {
@@ -150,16 +138,11 @@ main .wrapper .main-logo {
 }
 
 main .wrapper ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
   max-width: 1280px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 main .wrapper ul .production {
@@ -171,7 +154,6 @@ main .wrapper ul .production :hover {
   position: relative;
   z-index: 1;
   opacity: 0.8;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
@@ -202,21 +184,15 @@ main .more-btn .btn-2 {
 }
 
 footer .wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
   max-width: 1280px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   padding: 0 40px;
   min-height: 100%;
 }
 
 footer .wrapper ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -249,8 +225,6 @@ footer .wrapper .copy-right p {
     display: block;
   }
   footer .wrapper ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     margin: 0;
   }

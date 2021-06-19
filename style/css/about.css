@@ -29,14 +29,10 @@ header {
 }
 
 header .wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
   max-width: 1280px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   padding: 25px 40px 20px 40px;
 }
 
@@ -48,6 +44,7 @@ header .wrapper .logo {
 header .wrapper .logo img {
   width: 100%;
   height: 100%;
+  cursor: pointer;
 }
 
 header .humberger {
@@ -70,7 +67,6 @@ header .humberger .bar {
   height: 2px;
   right: 6px;
   background: #555;
-  -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
 }
 
@@ -101,21 +97,13 @@ header .mask nav ul li a {
 
 /*ハンバーガーを開いたとき*/
 .active-top {
-  -webkit-transform: translate(-50%, 15px) rotate(45deg);
-          transform: translate(-50%, 15px) rotate(45deg);
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
+  transform: translate(0, 5px) rotate(45deg);
   transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 .active-bottom {
-  -webkit-transform: translate(-50%, 5px) rotate(-45deg);
-          transform: translate(-50%, 5px) rotate(-45deg);
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
+  transform: translate(0, -5px) rotate(-45deg);
   transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 .open {
@@ -140,76 +128,34 @@ main {
 
 main .wrapper {
   margin: 0 auto;
-  padding-bottom: 150px;
+  padding-bottom: 160px;
   max-width: 1280px;
 }
 
 main .wrapper .main-logo {
   max-width: 1280px;
-  margin: 40px auto 30px auto;
+  margin: 40px auto 16px auto;
   font-size: 14px;
   font-weight: 525;
 }
 
-main .wrapper .product {
-  display: -webkit-box;
-  display: -ms-flexbox;
+main .wrapper ul {
+  max-width: 600px;
+}
+
+main .wrapper ul li {
   display: flex;
+  justify-content: space-around;
 }
 
-main .wrapper .product .product-img {
-  width: 400px;
-  padding-right: 60px;
-}
-
-main .wrapper .product .product-img img {
-  max-width: 100%;
-}
-
-main .wrapper .product ul {
-  margin: 0;
-  max-width: 350px;
-}
-
-main .wrapper .product ul li p {
-  padding: 20px 0 0 0;
-  margin-top: 0;
+main .wrapper ul li p {
   font-size: 14px;
-}
-
-main .wrapper .product ul li dl {
-  text-align: left;
-}
-
-main .wrapper .product ul li dl dt {
-  float: left;
-  margin: 0;
-  width: 30%;
-  font-size: 14px;
-}
-
-main .wrapper .product ul li dl dd {
-  float: left;
-  margin: 0;
-  width: 65%;
-  font-size: 14px;
-}
-
-main .wrapper .back-btn {
-  text-align: center;
-  margin: 0 auto;
-  padding-top: 70px;
-}
-
-main .wrapper .back-btn a {
-  text-decoration: none;
-  color: black;
-  width: 100%;
-  font-size: 14px;
+  line-height: 1.6rem;
 }
 
 #wrapper {
   width: 100%;
+  height: 100%;
   position: relative;
 }
 
@@ -220,20 +166,14 @@ footer {
 }
 
 footer .wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
   max-width: 1280px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   padding: 0 40px;
 }
 
 footer .wrapper ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -258,31 +198,17 @@ footer .wrapper .copy-right p {
   main {
     padding-top: 90px;
   }
-  main .wrapper .product {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    width: 100%;
+  main .wrapper .production {
+    width: 47%;
   }
-  main .wrapper .product .product-img {
-    text-align: center;
-    margin: 0 auto;
-    padding: 0;
-    width: 100%;
-  }
-  main .wrapper .product ul {
-    max-width: 100%;
-  }
-  main .wrapper .product ul li {
-    width: 100%;
+  footer {
+    position: static;
   }
   footer .wrapper {
     display: block;
+    padding-bottom: 10px;
   }
   footer .wrapper ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     margin: 0;
   }
@@ -290,4 +216,4 @@ footer .wrapper .copy-right p {
     margin: 0 0 10px 0;
   }
 }
-/*# sourceMappingURL=product-detail.css.map */
+/*# sourceMappingURL=about.css.map */
