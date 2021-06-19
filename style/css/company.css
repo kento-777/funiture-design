@@ -89,6 +89,12 @@ header .mask nav ul li {
 header .mask nav ul li a {
   font-size: 14px;
   color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+header .mask nav ul li a:hover {
+  opacity: 0.5;
+  transition: all 0.3s ease-in-out;
 }
 
 /*ハンバーガーを開いたとき*/
